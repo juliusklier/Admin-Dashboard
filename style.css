@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: solid black; */
+  }
+  
+  .container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 4px;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar nav"
+    "sidebar article"
+    "sidebar article"
+    "sidebar article"
+    "sidebar article"
+    "footer footer";
+  }
+  
+  .container div {
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+  }
+  
+  .sidebar {
+    background-color: #1892d4;
+    display: grid;
+    color: white;
+    gap: 15px;
+    grid-area: sidebar;
+    grid-template-rows: 1fr 2fr 3fr 4fr;
+    grid-template-areas: 
+    "logo"
+    "main-menu" 
+    "settings"
+    "."
+  }
+  .sidebar div {
+    color: white;
+  }
+
+  .logo {
+
+  }
+
+  .main-menu {
+
+  }
+
+  .main-menu ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+  list-style: none;
+  }
+
+  .settings {
+
+  }
+
+  .settings ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+  list-style: none;
+  }
+
+  .header {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-row: 1fr 1.5fr;
+    grid-template-areas: 
+    "search search"
+    "profile actions";
+  }
+
+  .nav {
+    grid-area: search;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+  }
+
+  .search ul {
+    list-style: none;
+  }
+  
+  #myInput {
+    background-color: #e2e8f0 ;
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    /* margin-bottom: 12px; Add some space below the input */
+  }
+
+  .profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+  }
+
+  .notification {
+
+  }
+
+  .profile-picture {
+
+  }
+
+
+
+  .user {
+    grid-area: profile;
+  }
+  .update {
+    grid-area: actions;
+  }
+  .update ul {
+    display: flex;
+    flex-direction: row nowrap;
+    gap: 150px;
+    justify-content: center;
+  list-style: none;
+  }
+  .board {
+    background-color: #e1e8f0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .article {
+    grid-area: article;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .article p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+  }
+  
+  .article .card {
+    border-left: solid 10px #f0b42a;
+    height: 200px;
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+  }
+  
+  .card p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  .card .title {
+    font-size: 18px;
+    text-align: center;
+  }
+  .right-sidebar {
+    display: grid;
+
+  }
+  
