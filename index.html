@@ -16,28 +16,20 @@
               <p>Dashboard</p>
             </div>
             <div class="main-menu">
-                <!-- <ul>
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Communities</li>
-                </ul> -->
-                <ul>
-                  <li><img src="assets/home_white_24dp.svg" alt="home_white_24dp"> Home</li>
-                  <li><img src="assets/account_circle_black_24dp.svg" alt="account_circle_black_24dp"> Profile</li>
-                  <li><img src="assets/chat_bubble_black_24dp.svg" alt="chat_bubble_black_24dp"> Messages</li>
-                  <li><img src="assets/history_white_24dp.svg" alt="history_white_24dp"> History</li>
-                  <li><img src="assets/task_alt_black_24dp.svg" alt="task_alt_black_24dp"> Tasks</li>
-                  <li><img src="assets/groups_white_24dp.svg" alt="groups_white_24dp"> Communities</li>
-              </ul>
+                <ul class="main-items">
+                  <li class="item"><img src="assets/home_white_24dp.svg" alt="home_white_24dp"><p class="main-item">Home</p></li>
+                  <li class="item"><img src="assets/account_circle_white_24dp.svg" alt="account_circle_white_24dp"><p class="main-item">Profile</p></li>
+                  <li class="item"><img src="assets/chat_bubble_outline_white_24dp.svg" alt="chat_bubble_white_24dp"><p class="main-item">Messages</p></li>
+                  <li class="item"><img src="assets/history_white_24dp.svg" alt="history_white_24dp"><p class="main-item">History</p></li>
+                  <li class="item"><img src="assets/task_alt_white_24dp.svg" alt="task_alt_white_24dp"><p class="main-item">Tasks</p></li>
+                  <li class="item"><img src="assets/groups_white_24dp.svg" alt="groups_white_24dp"><p class="main-item">Communities</p></li>
+                </ul>
             </div>
             <div class="settings">
               <ul>
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
+                <li class="item"><img src="assets/settings_white_24dp.svg" alt="settings_white_24dp"><p class="setting-item">Settings</p></li>
+                  <li class="item"><img src="assets/help_white_24dp.svg" alt="help_white_24dp"><p class="setting-item">Support</p></li>
+                  <li class="item"><img src="assets/verified_user_white_24dp.svg" alt="verified_user_white_24dp"><p class="setting-item">Privacy</p></li>
               </ul>
             </div>
         </div>
@@ -45,38 +37,30 @@
           <div class="header">
             <div class="nav">
               <div class="search">
-              <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></li>
+              <ul class="search-bar">
+                <li id="searcher"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></li>
                 <li><input type="text" id="myInput" onkeyup="myFunction()"></li>
               </ul>
             </div>
             <div class="profile">
-              <div class="notification">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zM7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42z"/></svg>
-              </div>
-              <div class="profile-picture">
-                <img src="assets/Profilepic.png" alt="">
-              </div>
-              <div class="user-name">
-                <p>Morgen Oakley</p>
-              </div>
+                <svg class="notification" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zM7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42z"/></svg>
+                <img class="profile-picture" src="assets/Profilepic.png" alt="">
+                <p class="user-name">Morgen Oakley</p>
             </div>
           </div>
-              <div class="user">
-                <div class="profile-picture">
-                  <img id="pb-bigger" src="assets/Profilepic.png" alt="">
-                  </div>
-                  <div class="welcome">
-                    <p id="message">Hi there,</p>
-                    <p>Morgen Oakley (@morgan)</p>
-                  </div>
+
               </div>
               <div class="update">
-                <ul>
-                  <li><button>New</button></li>
-                  <li><button>Upload</button></li>
-                  <li><button>Share</button></li>
-                </ul>
+                <div class="user">
+                  <img id="pb-bigger" src="assets/Profilepic.png" alt="">
+                    <p id="message">Hi there,</p>
+                    <p id="username">Morgen Oakley (@morgan)</p>
+                  </div>
+                <div class="actions">
+                  <button>New</button>
+                  <button>Upload</button>
+                  <button>Share</button>
+                </div>
               </div>
           </div>
           <div class="board">
@@ -85,28 +69,94 @@
               <p>Your Projects</p>
               <div class="article">
                 <div class="card">
-                  <p class="title">Article Title</p>
+                  <p class="title">Super Cool Project</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <div class="icons">
+                    <div class="star">
+                      <img src="assets/star_rate_black_24dp.svg" alt="star_rate_black_24dp">
+                    </div>
+                    <div class="eye">
+                      <img src="assets/visibility_black_24dp.svg" alt="visibility_black_24dp">
+                    </div>
+                    <div class="share">
+                      <img src="assets/share_black_24dp.svg" alt="share_black_24dp">
+                    </div>
+                  </div>
                 </div>
                 <div class="card">
-                  <p class="title">Article Title</p>
+                  <p class="title">Less Cool Project</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <div class="icons">
+                    <div class="star">
+                      <img src="assets/star_rate_black_24dp.svg" alt="star_rate_black_24dp">
+                    </div>
+                    <div class="eye">
+                      <img src="assets/visibility_black_24dp.svg" alt="visibility_black_24dp">
+                    </div>
+                    <div class="share">
+                      <img src="assets/share_black_24dp.svg" alt="share_black_24dp">
+                    </div>
+                  </div>
                 </div>
                 <div class="card">
-                  <p class="title">Article Title</p>
+                  <p class="title">Impossible App</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <div class="icons">
+                    <div class="star">
+                      <img src="assets/star_rate_black_24dp.svg" alt="star_rate_black_24dp">
+                    </div>
+                    <div class="eye">
+                      <img src="assets/visibility_black_24dp.svg" alt="visibility_black_24dp">
+                    </div>
+                    <div class="share">
+                      <img src="assets/share_black_24dp.svg" alt="share_black_24dp">
+                    </div>
+                  </div>
                 </div>
                 <div class="card">
-                  <p class="title">Article Title</p>
+                  <p class="title">Easy Peasy App</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <div class="icons">
+                    <div class="star">
+                      <img src="assets/star_rate_black_24dp.svg" alt="star_rate_black_24dp">
+                    </div>
+                    <div class="eye">
+                      <img src="assets/visibility_black_24dp.svg" alt="visibility_black_24dp">
+                    </div>
+                    <div class="share">
+                      <img src="assets/share_black_24dp.svg" alt="share_black_24dp">
+                    </div>
+                  </div>
                 </div>
                 <div class="card">
-                  <p class="title">Article Title</p>
+                  <p class="title">Ad Block</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <div class="icons">
+                    <div class="star">
+                      <img src="assets/star_rate_black_24dp.svg" alt="star_rate_black_24dp">
+                    </div>
+                    <div class="eye">
+                      <img src="assets/visibility_black_24dp.svg" alt="visibility_black_24dp">
+                    </div>
+                    <div class="share">
+                      <img src="assets/share_black_24dp.svg" alt="share_black_24dp">
+                    </div>
+                  </div>
                 </div>
                 <div class="card">
-                  <p class="title">Article Title</p>
+                  <p class="title">Money Maker</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <div class="icons">
+                    <div class="star">
+                      <img src="assets/star_rate_black_24dp.svg" alt="star_rate_black_24dp">
+                    </div>
+                    <div class="eye">
+                      <img src="assets/visibility_black_24dp.svg" alt="visibility_black_24dp">
+                    </div>
+                    <div class="share">
+                      <img src="assets/share_black_24dp.svg" alt="share_black_24dp">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,24 +165,49 @@
             <div class="announcements">
               <p>Announcements</p>
               <div class="news-block">
-                <div class="news"></div>
-                <div class="news"></div>
-                <div class="news"></div>
+                <div class="news">
+                  <p class="news-item">Site Maintenance</p>
+                  <p class="information-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <hr>
+                </div>
+                <div class="news">
+                  <p class="news-item">Community Share Day</p>
+                  <p class="information-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                  <hr>
+                </div>
+                <div class="news">
+                  <p class="news-item">Updated Privacy Policy</p>
+                  <p class="information-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                </div>
               </div>
             </div>
             <div class="trending">
               <p>Trending</p>
               <div class="posts">
-                <div class="users"></div>
-                <div class="users"></div>
-                <div class="users"></div>
-                <div class="users"></div>
+                <div class="users">
+                  <img class="profile-picture" src="assets/Profilepic.png" alt="">
+                  <p class="nickname">@morgan</p>
+                  <p class="project">Super Cool Project</p>
+              </div>
+                <div class="users">
+                  <img class="profile-picture" src="assets/Profilepic.png" alt="">
+                  <p class="nickname">@morgan</p>
+                  <p class="project">Super Cool Project</p>
+              </div>
+                <div class="users">
+                  <img class="profile-picture" src="assets/Profilepic.png" alt="">
+                  <p class="nickname">@morgan</p>
+                  <p class="project">Super Cool Project</p>
+              </div>
+                <div class="users">
+                    <img class="profile-picture" src="assets/Profilepic.png" alt="">
+                    <p class="nickname">@morgan</p>
+                    <p class="project">Super Cool Project</p>
+                </div>
+                </div>
               </div>
             </div>
           </div>
           </div>
-        </div>
-    </div>
-     
   </body>
 </html>

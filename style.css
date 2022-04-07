@@ -8,7 +8,6 @@
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    gap: 4px;
     grid-template-areas: 
     "sidebar header"
     "sidebar article"
@@ -17,7 +16,8 @@
   }
   
   .container div {
-    padding: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
     font-size: 32px;
     font-family: Helvetica;
     font-weight: bold;
@@ -30,9 +30,9 @@
     background-color: #1892d4;
     display: grid;
     color: white;
-    gap: 15px;
+    /* gap: 15px; */
     grid-area: sidebar;
-    grid-template-rows: 1fr 2fr 3fr ;
+    grid-template-rows: 0.5fr 2fr 3fr ;
     grid-template-areas: 
     "logo"
     "main-menu" 
@@ -43,44 +43,63 @@
   }
 
   .logo {
+    grid-area: logo;
+    justify-content: center;
+    align-content: center;
     display: flex;
     gap: 15px;
 
   }
   .logo svg{
     fill: white;
-    width: clamp(50px, 25px, 10px);
-    height: clamp(50px, 25px, 10px);
+    width: clamp(40px, 25px, 10px);
+    height: clamp(40px, 25px, 10px);
 
   }
 
   .main-menu {
+    grid-area: main-menu;
 
   }
+.main-items {
+  grid-area: title;
+}
 
+.item {
+  padding-left: 25px;
+  text-align: left;
+  display: flex;
+  gap: 15px;
+  flex-direction: row nowrap;
+  align-content: center;
+}
+
+.main-item {
+  align-self: center
+}
   .main-menu ul {
+    font-size: 0.5em;
+    text-align: left;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 15px;
   list-style: none;
   }
 
-  li sv{
-    fill: white;
-  }
-
-  .settings {
-
-  }
 
   .settings ul {
+    font-size: 0.5em;
+    text-align: left;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 15px;
   list-style: none;
   }
 
+.main div {
+  padding: 10px;
 
+}
 /* Header right section */
   .header {
     background-color: white;
@@ -89,7 +108,7 @@
     grid-row: 1fr 1.5fr;
     grid-template-areas: 
     "search search"
-    "profile actions";
+    "profile profile";
   }
 
   .nav {
@@ -105,7 +124,7 @@
     align-content: stretch;
     justify-content: stretch;
   }
-  
+
   #myInput {
     background-color: #e2e8f0 ;
     background-image: url(search); /* Add a search icon to input */
@@ -120,47 +139,54 @@
   }
 
   .profile {
-    display: grid;
-    grid-template-columns: 1fr 2fr 3fr;
-    text-align: center;
+   display: flex;
+   gap: 25px;
+   justify-content: center;
+   align-content: center;
   }
 
 .notification img{
 
 }
-.profile-picture img{
-  width: clamp(50px, 25px, 10px);
-  height: clamp(50px, 25px, 10px);
+.profile img{
+  width: clamp(35px, 25px, 10px);
+  height: clamp(35px, 25px, 10px);
+  align-self: center;
 }
 
-.user-name p {
+.profile p {
   /* No wrapping of the Username */
   overflow: hidden; white-space: nowrap;
-  font-size: 0.75em;
+  font-size: 0.4em;
+  align-self: center;
 }
-  .notification {
 
-  }
-
-  .profile-picture {
-
-  }
+.profile svg {
+  align-self: center;
+}
 
 button {
   border-radius: 25px;
   width: clamp(100px, 75px, 50px);
-  height: clamp(50px, 30px, 15px);
+  height: clamp(40px, 30px, 15px);
   background-color: #1892d4;
   color: white;
-  font-size: 0.5em;
+  font-size: 0.4em;
   font-weight: bold;
   border: none;
 }
 
   .user {
-    grid-area: profile;
+    grid-area: user;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "pb welcome"
+    "pb username";
+    align-content: start;
+    justify-content: start;
+    gap: 5px;
+    height: 60px;
+    text-align: left;
   }
 .welcome {
   display: grid;
@@ -168,12 +194,22 @@ button {
 }
 
 #pb-bigger {
-  width: clamp(75px, 50px, 25px);
-  height: clamp(75px, 50px, 25px);
+  grid-area: pb;
+  width: clamp(60px, 50px, 25px);
+  height: clamp(60px, 50px, 25px);
 }
 #message {
+  grid-area: welcome;
+  justify-self: start;
+  font-size: 0.3em;
+  align-self: end;
+}
+
+#username {
+  grid-area: username;
   justify-self: start;
   font-size: 0.5em;
+  overflow: hidden; white-space: nowrap;
 }
 .welcome p {
   justify-self: start;
@@ -182,22 +218,39 @@ button {
 }
   
   .update {
-    grid-area: actions;
+    grid-area: profile;
+    display: grid;
+    grid-template-areas: 
+    "user actions";
+    align-content: center;
   }
   .update ul {
     display: flex;
     flex-direction: row nowrap;
-    gap: 150px;
+    gap: 25px;
     justify-content: center;
   list-style: none;
   }
 
   /* Projectarea */
+  .title p {
+      padding: 5px;
+      text-align: start;
+      font-weight: 400;
+      font-size: 0.6em;
+    }
 
   .board {
     background-color: #e1e8f0;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
+    grid-template-rows: auto;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    
   }
 
   .article {
@@ -205,7 +258,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 15px;
+    gap: 25px;
   }
 
   .article p {
@@ -220,7 +273,7 @@ button {
     height: 200px;
     background-color: #FFFFFF;
     color: black;
-    text-align: center;
+    text-align: left;
   }
   
   .card p {
@@ -232,26 +285,111 @@ button {
   
   .card .title {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
+    font-weight: 700;
   }
   .right-sidebar {
     display: grid;
-    grid-template-rows: 1fr 1fr
+    grid-template-rows: 0.5fr 0.8fr
 
   }
 
   .news-block {
     display: grid;
-    border: solid red;
+    background-color: white;
+    border-radius: 5px;
     grid-template-rows: 1fr 1fr 1fr;
   }
-  
+
+
+  /* Announcement Block */
+
+  .announcements p {
+    padding: 5px;
+    text-align: start;
+    font-weight: 400;
+    font-size: 0.6em;
+  }
+  .news {
+    padding-left: 5px;
+  }
+  .news .news-item {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .news .information-item {
+    color: black;
+    font-weight: normal;
+    font-size: 12px;
+    padding-bottom: 16px;
+    padding-top: 8px;
+    text-align: left;
+  }
+/* Trending Block */
+  div.users {
+    align-content: start;
+    justify-content: start;
+  }
+  .trending p {
+    padding: 5px;
+    text-align: start;
+    font-weight: 400;
+    font-size: 0.6em;
+  }
   .posts {
+    background-color: #FFFFFF;
+    border-radius: 5px;
     display: grid;
-    border: solid red;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 
+  .users {
+    display: grid;
+    grid-template-areas: 
+    "picture username"
+    "picture title";
+    height: 60px;
+    text-align: left;
+  }
+  .users > img {
+    grid-area: picture;
+    justify-self: end;
+    align-self: center;
+    padding: 5px;
+    width: clamp(50px, 25px, 10px);
+    height: clamp(50px, 25px, 10px);
+
+  }
+
+  /* .users hr {
+    text-align: center;
+    background-color: grey;
+    border: solid grey;
+  } */
+  .nickname {
+    grid-area: username;
+  }
+
+  .users .nickname {
+    align-self: end;
+    color: black;
+    font-size: 0.5em;
+  }
+  .project {
+    grid-area: title;
+  }
+  .users .project {
+    color: gray;
+    font-size: 0.5em;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: flex-end;
+    align-content: fle;
+  }
   /* Google Icons */
 
   @font-face {
