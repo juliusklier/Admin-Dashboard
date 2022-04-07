@@ -11,12 +11,9 @@
     gap: 4px;
     grid-template-areas: 
     "sidebar header"
-    "sidebar nav"
     "sidebar article"
     "sidebar article"
-    "sidebar article"
-    "sidebar article"
-    "footer footer";
+    "sidebar article";
   }
   
   .container div {
@@ -26,25 +23,34 @@
     font-weight: bold;
     color: rgb(0, 0, 0);
   }
-  
+
+
+  /* Sidebar of the Dashboard */
   .sidebar {
     background-color: #1892d4;
     display: grid;
     color: white;
     gap: 15px;
     grid-area: sidebar;
-    grid-template-rows: 1fr 2fr 3fr 4fr;
+    grid-template-rows: 1fr 2fr 3fr ;
     grid-template-areas: 
     "logo"
     "main-menu" 
-    "settings"
-    "."
+    "settings";
   }
   .sidebar div {
     color: white;
   }
 
   .logo {
+    display: flex;
+    gap: 15px;
+
+  }
+  .logo svg{
+    fill: white;
+    width: clamp(50px, 25px, 10px);
+    height: clamp(50px, 25px, 10px);
 
   }
 
@@ -59,6 +65,10 @@
   list-style: none;
   }
 
+  li sv{
+    fill: white;
+  }
+
   .settings {
 
   }
@@ -70,6 +80,8 @@
   list-style: none;
   }
 
+
+/* Header right section */
   .header {
     background-color: white;
     display: grid;
@@ -87,26 +99,45 @@
   }
 
   .search ul {
+    gap:25px;
     list-style: none;
+    display: flex;
+    align-content: stretch;
+    justify-content: stretch;
   }
   
   #myInput {
     background-color: #e2e8f0 ;
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-image: url(search); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 100%; /* Full-width */
     font-size: 16px; /* Increase font-size */
     padding: 12px 20px 12px 40px; /* Add some padding */
     border: 1px solid #ddd; /* Add a grey border */
+    border-radius: 25px;
     /* margin-bottom: 12px; Add some space below the input */
   }
 
   .profile {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
+    text-align: center;
   }
 
+.notification img{
+
+}
+.profile-picture img{
+  width: clamp(50px, 25px, 10px);
+  height: clamp(50px, 25px, 10px);
+}
+
+.user-name p {
+  /* No wrapping of the Username */
+  overflow: hidden; white-space: nowrap;
+  font-size: 0.75em;
+}
   .notification {
 
   }
@@ -115,11 +146,41 @@
 
   }
 
-
+button {
+  border-radius: 25px;
+  width: clamp(100px, 75px, 50px);
+  height: clamp(50px, 30px, 15px);
+  background-color: #1892d4;
+  color: white;
+  font-size: 0.5em;
+  font-weight: bold;
+  border: none;
+}
 
   .user {
     grid-area: profile;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
+.welcome {
+  display: grid;
+  grid-template-rows: 0.5fr 0.75fr;
+}
+
+#pb-bigger {
+  width: clamp(75px, 50px, 25px);
+  height: clamp(75px, 50px, 25px);
+}
+#message {
+  justify-self: start;
+  font-size: 0.5em;
+}
+.welcome p {
+  justify-self: start;
+  font-size: 0.55em;
+  overflow: hidden; white-space: nowrap;
+}
+  
   .update {
     grid-area: actions;
   }
@@ -130,6 +191,9 @@
     justify-content: center;
   list-style: none;
   }
+
+  /* Projectarea */
+
   .board {
     background-color: #e1e8f0;
     display: grid;
@@ -172,6 +236,57 @@
   }
   .right-sidebar {
     display: grid;
+    grid-template-rows: 1fr 1fr
 
   }
+
+  .news-block {
+    display: grid;
+    border: solid red;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
   
+  .posts {
+    display: grid;
+    border: solid red;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  /* Google Icons */
+
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
